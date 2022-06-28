@@ -1,0 +1,128 @@
+body{
+    margin: 0px 0px 20px 20px;
+    background-color:rgb(221, 243, 221);
+}
+
+div#indexhtml, #indexintroduccion, #indexcss {
+    border: solid 1px black;
+    position: fixed;
+    margin: 70px 0px 0px 0px;
+    float: left;
+    width: 18%;
+    background-color: rgb(220, 236, 241);
+}
+#segundaColumna{
+    float: right;
+    width: 80%;
+}
+.title{
+    text-align: center;
+    background-color: rgb(169, 241, 169);
+    margin: 10px 50px 0px 0px;
+}
+ul li
+{
+    margin: 0px 0px 10px 0px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    
+}
+
+.param{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    line-height: 20px;
+    text-align: center;
+    text-align: justify;
+    margin: 0px 50px 30px 0px;
+}
+
+.subtitle, .t3{
+    background-color: rgb(169, 241, 169);
+    margin: 10px 50px 0px 0px;
+}
+ul.list li{
+    margin: 0px 0px 0px 20px;
+}
+#exa
+{
+    text-align: center;
+}
+pre.example{
+    margin: 0px 40px 0px 0px;
+    color: black;
+    background-color: lightgray;
+}
+footer#fin p{
+    margin: 0px 30px 30px 30px;
+}
+ul#items li{
+    text-align: center;
+    text-align: justify;
+    margin: 0px 50px 0px 0px;
+}
+/* ------------Pie de página------------------------ */
+footer#fin p.param{
+    margin: 0px 300px 50px 0px;
+}
+hr{
+    margin: 0px 40px 0px 0px;
+}
+#tindex{
+    text-align: center;
+}
+#indexcss a, #indexhtml a, #indexintroduccion a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+#indexcss li, #indexhtml li, #indexintroduccion li{
+    font-size: 18px;
+    display: block;
+}
+div#indexcss li a:hover, div#indexhtml li a:hover, div#indexintroduccion li a:hover{
+    color: #f11010;
+}
+header{
+    text-align: center;
+    background-color: rgb(169, 241, 169);
+    margin: 10px 30px 0px 0px;
+}
+button{
+    position: absolute;
+    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color:lightgoldenrodyellow; /*color botón*/
+    color:black; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family:'Times New Roman', Times, serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+    top: 10px;
+    left: 80px;
+    float: left;
+    margin: 1px 40px;
+    max-width: 250px;
+}
+button#into{
+    position: absolute;
+    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color:lightgoldenrodyellow; /*color botón*/
+    color:black; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family:'Times New Roman', Times, serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+    top: 20px;
+    left: 80px;
+    float: left;
+    margin: 1px 40px;
+    max-width: 250px;
+}
+.linea{
+    float: left;
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+}
