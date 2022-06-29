@@ -4,18 +4,18 @@ body{
 }
 
 div#indexhtml, #indexintroduccion, #indexcss, #indexjs {
-   
-    /*border: solid 1px black;*/
+    height: 350px;
+    border: solid 1px black;
     position: fixed;
     margin: 70px 0px 0px 0px;
     float: left;
     width: 18%;
-    /*background-color: rgb(220, 236, 241);*/
-
+    background-color: rgb(220, 236, 241);
+    overflow: scroll;
 }
-/*::-webkit-scrollbar {
+::-webkit-scrollbar {
       width: 15px;
-}*/
+}
 /*
 ::-webkit-scrollbar-track {
       background-color: lightgray;
@@ -99,7 +99,7 @@ hr{
     font-size: 18px;
     display: block;
 }
-div#indexcss li a:hover, div#indexhtml li a:hover, div#indexintroduccion li a:hover, div#indexjs li a{
+div#indexcss li a:hover, div#indexhtml li a:hover, div#indexintroduccion li a:hover, div#indexjs li a:hover{
     color: #f11010;
 }
 header{
