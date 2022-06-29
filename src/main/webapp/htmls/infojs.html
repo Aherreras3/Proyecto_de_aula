@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link href="../css/pa.css" rel="stylesheet" type="text/css" media="screen" >
+    
+    <!-- <link rel="stylesheet" href="/Proyecto-de-aula-main/src/main/webapp/css/prism.css">
+    <script src="prism.js"></script> -->
+</head>
+<body>
+    <form action="../index.html">
+        <button type="submit">Atras</button>
+    </form>
+    <div id="indexjs">
+        <h1 id="tindex">Índice</h1>
+        <hr class="linea">
+        <ul>
+            <li><a href="#qjs">1 ¿Qué es JavaScript?</a></li>
+            <ul>
+                <li><a href="#conp">1.1 Importacia de JavaScript</a></li>
+                <li><a href="#incjs">1.2 Incorporando JavaScript</a></li>
+                <li><a href="#tec1">1.3 En línea</a></li>
+                <li><a href="#tec2">1.4 Código embebido</a></li>
+                <li><a href="#tec3">1.5 Archivos externos</a></li>
+                <li><a href="#ref">1.6 Referenciar elementos</a></li>
+                <li><a href="#ref1">1.7 Nuevos selectores</a></li>
+            </ul>
+        </ul>
+    </div>
+    <header id="tt">
+        <h1 id="qjs" class="title">¿Que es JavaScript?</h1>
+    </header>
+    <div id="segundaColumna">
+        <p class="param">
+            JavaScript es un lenguaje interpretado, considerado una de las grandes bases en la creación de páginas y por mucho tiempo
+            este solo fue considerado como un complemento para HTML y CSS. La razón por la que empezamos a ver a JavaScript como
+            una herramienta indispensable para la creación de páginas web fue cuando se desarrollaros nuevos motores de interpretación,
+            los cuales fueron creados para acelerar el procesamiento de código. La principal ventaja de estos nuevos motores fue que 
+            pasaban el lenguaje JavaScript a lenguaje maquina aumentando el rendimiento, esto permitió superar antiguas limitaciones de rendimiento
+            y ayudo confirmar que JavaScript es la mejor opción para la web.
+        </p>
+        <h2 id="conp" class="subtitle"> Importacia de JavaScript</h2>
+        <p class="param">
+            El crecimiento de JavaScript trajo consigo el crecimiento de los navegadores, ahora estos integraban interfaces de programación
+            (APIs) para asistir al lenguaje en funciones elementales. Con esto se busca hacer disponibles nuevas funciones con técnicas de
+            programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la web.
+        </p>
+        <h2 id="incjs" class="subtitle"> Incorporando JavaScript</h2>
+        <p class="param">
+            Al igual que CSS, existes varias técnicas para incorporar código JavaScript dentro de un documento HTML, pero adelantamos
+            que la más recomendada es la inclusión de archivos externos al igual que ocurre con CSS. <br>
+            A continuación, pasaremos a explicar dichas técnicas.
+        </p>
+        <h2 id="tec1" class="subtitle">En línea</h2>
+        <p class="param">
+            Es una de las técnicas más sencillas, se hace uso de las etiquetas HTMl para dentro de ellas incrustar el código 
+            JavaScript, por lo general se suelen usar manejadores de eventos vinculados con el raton como son onclick, onMouseOver entre otros
+            aunque también se suele usar en el teclado.
+            <pre  class="example">
+                <code>
+                    &ltDOCTYPE html&gt
+                    &lthtml lang=”es”&gt
+                    &lthead&gt
+                        <b>&lttitle>Título del documento&gt/title&gt</b>
+                    &lthead&gt
+                    &ltbody&gt
+                        <b>&ltp onclick="alert('se realizo un click') "&gt Mi prueba</b><b>&ltp&gt</b>
+                    &ltbody&gt
+                    &lt/html&gt
+                </code>
+            </pre>
+            <p class="param">
+                El ejemplo anterior mostrara un pequeño recuadro con el mensaje "se realizó un click" cada que se realice dicha acción
+                sobre el texto que contiene el código en su etiqueta. <br>
+                Al igual que pasó con CSS, esta practica no se recomienda ya que extiende el cogido innecesariamente y puede ser difícil
+                el querer actualizar dichos códigos.
+            </p>
+        </p>
+        <h2 id="tec2" class="subtitle">Código embebido</h2>
+        <p class="param">
+            Una mejor forma a comparacion de la anterior es agrupar todos loc códigos en un mismo ligar uilizando la etiqueta &ltscript&gt,
+            asi podremos utilisar dicho código ulilizando referencias. <br>
+            El elemento &ltscript&gt puede ser utilizado en cualquier parte del documento, pero se recomienda colocarlo en la cabecera para tener mayor
+            claridad.
+            <pre class="example">
+                <code>
+                    &ltDOCTYPE html&gt
+                    &lthtml lang=”es”&gt
+                    &lthead&gt
+                    <b>&lttitle>Título del documento&gt/title&gt</b>
+                        <b>&lt script &gt</b>
+                        <b> function m_alerta(){</b>
+                            <b> alert('realizó clic'); }</b>
+                        <b> function e_alerta(){</b>
+                            <b> document.getElementsByTagName('p')[0].onclick=m_alerta; }</b>
+                        <b>&lt /script &gt</b>
+                    &lthead&gt
+                    &ltdiv id="texto"&tgt
+                        <b>&ltp&gt Hacer click</b><b>&ltp&gt</b>
+                    &lt/div&tgt
+                    &lt/html&gt
+                </code>
+            </pre>
+        </p>
+        <h2 id="tec3" class="subtitle">Archivos externos</h2>
+        <p class="param">
+            El código JavaScript crece de una manera exponencial cuando agrgamos funciones y nuevas APIs, por que si utilizamos los codigos embebidos
+            el documento HTML seria enorme. La solucion mas recomendada para evitar este problema es agrupar todo el codigo JavaScript Enun archivo externo y luego añadirlo al documento HTML mediante el atributo <b>src:</b>.
+            <pre class="example">
+                <code>
+                    &ltDOCTYPE html&gt
+                    &lthtml lang=”es”&gt
+                    &lthead&gt
+                        &lttitle>Título del documento&gt/title&gt
+                        <b>&lt script src="myjs.js"&gt&lt/script&gt</b>
+                    &lthead&gt
+                    &ltbody&gt
+                        &ltp&gt>&ltp&gt Mi prueba&ltp&gt
+                    &ltbody&gt
+                    &lt/html&gt
+                </code>
+            </pre>
+        </p>
+        <h2 class="subtitle" id="ref">Referenciar Elementos</h2>
+        <p class="param">
+            Acualmente existen tes metodod disponibles para referenciar elementos HTML desde un JavaScript, acontinuación,
+            describiremos dichos metodos:
+            <ul class="list">
+                <li><h3>getElementsByTagName.</h3></li>
+                    <p class="param">Se utiliza para referenciar un elemento por si nombre o palabra clave.</p>
+                    <pre class="example">
+                        <code>
+                            &ltDOCTYPE html&gt
+                            &lthtml lang=”es”&gt
+                            &lthead&gt
+                            &lttitle>Título del documento&gt/title&gt
+                                &lt script &gt
+                                function m_alerta(){
+                                     alert('realizó clic'); }
+                                function e_alerta(){
+                                    <b> document.getElementsByTagName('p')[0].onclick=m_alerta; }</b>
+                                &lt /script &gt
+                            &lthead&gt
+                            &ltdiv id="texto"&tgt
+                                <b>&ltp&gt Hacer click</b><b>&ltp&gt</b>
+                            &lt/div&tgt
+                            &lt/html&gt
+                        </code>
+                    </pre>
+                <li><h3>getElementById.</h3></li>
+                    <p class="param">Utilizado para referenciar un elemento especifco, por lo cual no pueden haber mas de un elementos con el 
+                        mismo id.
+                        <pre class="example">
+                            <code>
+                                &ltDOCTYPE html&gt
+                                &lthtml lang=”es”&gt
+                                &lthead&gt
+                                &lttitle>Título del documento&gt/title&gt
+                                    &lt script &gt
+                                    function m_alerta(){
+                                        alert('realizó clic'); }
+                                    function e_alerta(){
+                                        <b> document.getElementById('mitexto')[0].onclick=m_alerta; }</b>
+                                    &lt /script &gt
+                                &lthead&gt
+                                &ltdiv id="texto"&tgt
+                                    <b>&ltp id="mitexto"&gt Hacer click</b><b>&ltp&gt</b>
+                                &lt/div&tgt
+                                &lt/html&gt
+                            </code>
+                        </pre>
+                    </p>
+                <li><h3>getElementsByClassName.</h3></li>
+                <p class="param">Este elemnto es una nueva incorporacion que nos permite obtener un elemento a partir del valor <b>class</b></p>.
+                    <pre class="example">
+                        <code>
+                            &ltDOCTYPE html&gt
+                                &lthtml lang=”es”&gt
+                                &lthead&gt
+                                &lttitle>Título del documento&gt/title&gt
+                                    &lt script &gt
+                                    function m_alerta(){
+                                        alert('realizó clic'); }
+                                    function e_alerta(){
+                                        <b> document.getElementsByClassName('mititulo')[0].onclick=m_alerta; }</b>
+                                    &lt /script &gt
+                                &lthead&gt
+                                &ltdiv id="texto"&tgt
+                                    &ltp id="mitexto"&gt Hacer click/&ltp&gt
+                                    <b>&lth1 class="mititulo"&gt Hacer click dos</b><b>&lth1&gt</b>
+                                &lt/div&tgt
+                                &lt/html&gt
+                        </code>
+                    </pre>
+                <p class="param">En el código anterior se hace referencia a h1 ya que tiene como valor se clase "mititulo".</p>
+            </ul>
+        </p>
+        <h2 id="ref1" class="subtitle">Nuevos selectores</h2>
+        <p class="param">
+            A comparacion de CSS, JavaScript se queda bastante atras en el temas de los selectores y para ello fue necesario la 
+            integracion de nuevos selectores para aumentar el nivel de JavaScript, por eso ahora se puede seleccionar elementos HTML aplicando toda clase de selectores CSS por medio de los métodos querySelector() y querySelectorAll().
+            <ul>
+                <li><h3>querySelector.</h3></li>
+                <p class="param">Este método retorna el primer elemento que concuerde con el grupo de selectores especificados entre
+                    paréntesis, los selectores osn declarados usando comillas y la misma sintaxis CSS.
+                    <pre class="example">
+                        <code>
+                            &ltDOCTYPE html&gt
+                                &lthtml lang=”es”&gt
+                                &lthead&gt
+                                &lttitle>Título del documento&gt/title&gt
+                                    &lt script &gt
+                                    function m_alerta(){
+                                        alert('realizó clic'); }
+                                    function e_alerta(){
+                                        <b> document.querySelector("#texto h1:first-child").onclick=m_alerta; }</b>
+                                    &lt /script &gt
+                                &lthead&gt
+                                &ltdiv id="texto"&tgt
+                                    &ltp id="mitexto"&gt Hacer click/&ltp&gt
+                                    <b>&lth1 class="mititulo"&gt Hacer click dos</b><b>&lth1&gt</b>
+                                    <b>&lth1 class="mititulo"&gt Hacer click tres</b><b>&lth1&gt</b>
+                                &lt/div&tgt
+                                &lt/html&gt
+                        </code>
+                    </pre>
+                    El ejemplo anterior retornara el primer hijo (h1) que se ecuentre dento del id texto.
+                </p>
+                <li><h3>querySelectorAll.</h3></li>
+                <p class="param"> Este método es muy parecido al anterior, con la diferencia que este de devolverá todos los emelentos
+                    que especificastes en el paréntesis en forma de lista.
+                    <pre class="example">
+                        <code>
+                            &ltDOCTYPE html&gt
+                                &lthtml lang=”es”&gt
+                                &lthead&gt
+                                &lttitle>Título del documento&gt/title&gt
+                                    &lt script &gt
+                                    function m_alerta(){
+                                        alert('realizó clic'); }
+                                    function e_alerta(){
+                                        <b> var lista = document.querySelector("#texto h1");}</b>
+                                         <b>for(var i=0; i&ltlista; i++)</b>
+                                            <b>lista[i]..onclick=m_alerta;</b>
+                                    &lt /script &gt
+                                &lthead&gt
+                                &ltdiv id="texto"&tgt
+                                    &ltp id="mitexto"&gt Hacer click/&ltp&gt
+                                    <b>&lth1 class="mititulo"&gt Hacer click dos</b><b>&lth1&gt</b>
+                                    <b>&lth1 class="mititulo"&gt Hacer click tres</b><b>&lth1&gt</b>
+                                    <b>&lth1 class="mititulo"&gt Hacer click cuatro</b><b>&lth1&gt</b>
+                                &lt/div&tgt
+                                &lt/html&gt
+                        </code>
+                    </pre>
+                    El código anterior devolverá todos los elementos h1 que se ecuentren dentro de un id="texto", y con un ciclo(for)
+                    se se les puede asiganar eventos a todos esos elementos.
+                </p>
+        <hr size="3px" color="gray">
+        <footer id="fin"> 
+            <h2 class="final">Referencias</h2> 
+            <p class="param">
+                [1]	J. D. Gauchat, El gran libro de HTML5, CSS3 y Javascript. 2012. [Online]. Available: https://books.google.es/books?hl=es&lr=&id=szDMlRzwzuUC&oi=fnd&pg=PA1&dq=el+gran+libro+de+html+y+css&ots=0CqKRZuBQe&sig=IG-19SSdwYZ6mZbhWaVeLYC99dE#v=onepage&q=el gran libro de html y css&f=false
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

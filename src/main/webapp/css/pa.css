@@ -3,14 +3,32 @@ body{
     background-color:rgb(221, 243, 221);
 }
 
-div#indexhtml, #indexintroduccion, #indexcss {
-    border: solid 1px black;
+div#indexhtml, #indexintroduccion, #indexcss, #indexjs {
+   
+    /*border: solid 1px black;*/
     position: fixed;
     margin: 70px 0px 0px 0px;
     float: left;
     width: 18%;
-    background-color: rgb(220, 236, 241);
+    /*background-color: rgb(220, 236, 241);*/
+
 }
+/*::-webkit-scrollbar {
+      width: 15px;
+}*/
+/*
+::-webkit-scrollbar-track {
+      background-color: lightgray;
+}
+::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-button {
+      background-color: navy;
+}
+::-webkit-scrollbar-corner {
+      background-color: black;
+}*/
 #segundaColumna{
     float: right;
     width: 80%;
@@ -18,7 +36,7 @@ div#indexhtml, #indexintroduccion, #indexcss {
 .title{
     text-align: center;
     background-color: rgb(169, 241, 169);
-    margin: 10px 50px 0px 0px;
+    margin: 10px 50px 30px 0px;
 }
 ul li
 {
@@ -32,7 +50,7 @@ ul li
     line-height: 20px;
     text-align: center;
     text-align: justify;
-    margin: 0px 50px 30px 0px;
+    margin: 5px 50px 30px 0px;
 }
 
 .subtitle, .t3{
@@ -69,25 +87,25 @@ hr{
 #tindex{
     text-align: center;
 }
-#indexcss a, #indexhtml a, #indexintroduccion a{
+#indexcss a, #indexhtml a, #indexintroduccion a, #indexjs a{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     display: block;
 }
 
-#indexcss li, #indexhtml li, #indexintroduccion li{
+#indexcss li, #indexhtml li, #indexintroduccion li, #indexjs li{
     font-size: 18px;
     display: block;
 }
-div#indexcss li a:hover, div#indexhtml li a:hover, div#indexintroduccion li a:hover{
+div#indexcss li a:hover, div#indexhtml li a:hover, div#indexintroduccion li a:hover, div#indexjs li a{
     color: #f11010;
 }
 header{
+    margin: 10px 0px 5px 0px;
     text-align: center;
     background-color: rgb(169, 241, 169);
-    margin: 10px 30px 0px 0px;
 }
 button{
     position: absolute;
@@ -124,5 +142,5 @@ button#into{
 .linea{
     float: left;
     width: 100%;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 10px 0px;
 }
