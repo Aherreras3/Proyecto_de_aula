@@ -2,9 +2,14 @@ body{
     margin: 0px 0px 20px 20px;
     background-color:rgb(221, 243, 221);
 }
+.pautas{
+    background-color: lightyellow;
+    border: solid 1px black;
+    width: 60%;
+}
 
-div#indexhtml, #indexintroduccion, #indexcss, #indexjs {
-    height: 350px;
+div#indexhtml, #indexintroduccion, #indexcss, #indexjs, #indexacc {
+    height: 75%;
     border: solid 1px black;
     position: fixed;
     margin: 70px 0px 0px 0px;
@@ -87,7 +92,7 @@ hr{
 #tindex{
     text-align: center;
 }
-#indexcss a, #indexhtml a, #indexintroduccion a, #indexjs a{
+#indexcss a, #indexhtml a, #indexintroduccion a, #indexjs a, #indexacc a{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     text-decoration: none;
@@ -95,11 +100,11 @@ hr{
     display: block;
 }
 
-#indexcss li, #indexhtml li, #indexintroduccion li, #indexjs li{
+#indexcss li, #indexhtml li, #indexintroduccion li, #indexjs li, #indexacc li{
     font-size: 18px;
     display: block;
 }
-div#indexcss li a:hover, div#indexhtml li a:hover, div#indexintroduccion li a:hover, div#indexjs li a:hover{
+div#indexcss li a:hover, div#indexhtml li a:hover, div#indexintroduccion li a:hover, div#indexjs li a:hover, #indexacc li a:hover{
     color: #f11010;
 }
 header{
