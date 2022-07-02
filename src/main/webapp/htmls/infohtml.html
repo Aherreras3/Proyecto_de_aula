@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML</title>
         <link rel="stylesheet" href="../css/pa.css">
+        <link rel="stylesheet" href="../css/prism.css">
     </head>
     <body>
         <form action="../index.html">
@@ -90,7 +91,7 @@
             En primer lugar, se debe indicar el tipo de documento que estamos creando. Esto en HTML se logra
             con la siguiente etiqueta.
         <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                 </code>
         </pre>
@@ -101,7 +102,7 @@
         La estructura de este leguaje es de tipo arbol y su raiz es el elemento html, este elemento
         evolvera el resto del codigo.
     <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lt/html&gt
@@ -115,7 +116,7 @@
     El elemento html se encuentra dividido en 2 partes, la cabecera y el cuerpo, el <span lang="en">head</span> 
     representa la cabecera y <span lang="en">body</span>  el cuerpo.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     <b>&lthead&gt</b>
@@ -130,7 +131,7 @@
 <p class="param">
     Este elemento representa al cuerpo del documento, todo lo que se ecuentre dentro será visible en la página web.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -148,7 +149,7 @@
     Ademas este elemento nos permite agregar otras etiquetas como <span lang="en">description</span> o <span lang="en">keywords</span>
     para defifir otros aspectos de la página web.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -158,7 +159,7 @@
                     &lthead&gt
                     &ltbody&gt
                     &ltbody&gt
-                    &l/thtml&gt
+                    &lt/thtml&gt
                 </code>
 </pre>
 </p>
@@ -166,7 +167,7 @@
 <p class="param">
     Esta etiqueta simplemente especifica el titulo del documento.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -186,7 +187,7 @@
     Este elemento va dentro de la cabecera, es usado para incorporar estilos, códigos JavaScript, imágenes o
     iconos desde archivos externos. Es el más común para incorporar archivos con estilos CSS.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -214,7 +215,7 @@
     confundirse con el <span lang="en">head</span> ya que este no Solo se limita a proveer información introductoria (títulos, subtítulos, logos), este proveer información desde cualquier parte del cuerpo,
     y por lo general solo se usa en esa sección.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -225,9 +226,9 @@
                         &ltlink rel=”stylesheet” href=”mystyle.css&gt
                     &lthead&gt
                     &ltbody&gt
-                        &lheader&gt
+                        &ltheader&gt
                             <b>&lttitle&gtEste es otro titulo del documento&lt/title&gt</b>
-                        &l/header&gt
+                        &lt/header&gt
                     &ltbody&gt
                     &lt/html&gt
                 </code>
@@ -237,7 +238,7 @@
 <p class="param">
     Esta etiqueta es utilizada para crear una barra de navegación en una página web.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -248,9 +249,9 @@
                         &ltlink rel=”stylesheet” href=”mystyle.css&gt
                     &lthead&gt
                     &ltbody&gt
-                        &lheader&gt
+                        &ltheader&gt
                             &lttitle&gtEste es otro titulo del documento&lt/title&gt
-                        &l/header&gt
+                        &lt/header&gt
                         <b>&ltnav&gt</b>
                             <b>&ltul&gt</b>
                                 <b>&ltli&gt página principal &lt/li&gt</b>
@@ -268,7 +269,7 @@
     Esta etiqueta es utilizada para separar el ducumento en secciones y siempre se ubica por debajo del 
     <span lang="en">header</span> ya que la infromacion que presenta es diferente a los titúlos.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -279,12 +280,12 @@
                         &ltlink rel=”stylesheet” href=”mystyle.css&gt
                     &lthead&gt
                     &ltbody&gt
-                        &lheader&gt
+                        &ltheader&gt
                             &lttitle&gtEste es otro titulo del documento&lt/title&gt
-                        &l/header&gt
+                        &lt/header&gt
                         &ltnav&gt
                             &ltul&gt
-                                &ltli&gt página principal &lt/li&gt
+                                &ltli&gt Página principal &lt/li&gt
                                 &ltli&gt Fotos &lt/li&gt
                                 &ltli&gt Videos &lt/li&gt
                             &lt/tul&gt
@@ -302,7 +303,7 @@
     Este elemneto es utilizado para creae una barra lateral, la cual mostrara informacion relacionada con la 
     información principal pero no son relevantes o igual de importantes.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -313,9 +314,9 @@
                         &ltlink rel=”stylesheet” href=”mystyle.css&gt
                     &lthead&gt
                     &ltbody&gt
-                        &lheader&gt
+                        &ltheader&gt
                             &lttitle&gtEste es otro titulo del documento&lt/title&gt
-                        &l/header&gt
+                        &lt/header&gt
                         &ltnav&gt
                             &ltul&gt
                                 &ltli&gt página principal &lt/li&gt
@@ -339,7 +340,7 @@
 <p class="param">
     Esta eqtiueta se utiliza para realizar el diseño final de la página (píe de página).
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -350,9 +351,9 @@
                         &ltlink rel=”stylesheet” href=”mystyle.css&gt
                     &lthead&gt
                     &ltbody&gt
-                        &lheader&gt
+                        &ltheader&gt
                             &lttitle&gtEste es otro titulo del documento&lt/title&gt
-                        &l/header&gt
+                        &lt/header&gt
                         &ltnav&gt
                             &ltul&gt
                                 &ltli&gt página principal &lt/li&gt
@@ -379,7 +380,7 @@
 <p class="param">
     Por lo general la información en una página web se muestra por partes que comparten características, la etiqueta &ltarticle&gt nos ayuda a identificar cada una de esas partes de mejor manera.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -390,9 +391,9 @@
                         &ltlink rel=”stylesheet” href=”mystyle.css&gt
                     &lthead&gt
                     &ltbody&gt
-                        &lheader&gt
+                        &ltheader&gt
                             &lttitle&gtEste es otro titulo del documento&lt/title&gt
-                        &l/header&gt
+                        &lt/header&gt
                         &ltnav&gt
                             &ltul&gt
                                 &ltli&gt página principal &lt/li&gt
@@ -401,18 +402,18 @@
                             &lt/tul&gt
                         &lt/nav&gt
                         &ltsection&gt
-                            <b>&lt article &gt</b>
-                                <b>&lt header &gt</b>
-                                    <b>&lt h1 &gt Primer parrafo &lt h1 &gt</b>
+                            <b>&ltarticle&gt</b>
+                                <b>&ltheader&gt</b>
+                                    <b>&lth1&gt Primer parrafo &lth1&gt</b>
                                     <b>Descripción parrafo uno</b>
-                                <b>&lt /header &gt</b>
-                            <b>&lt /article &gt</b>
-                            <b>&lt article &gt</b>
-                                <b>&lt header &gt</b>
-                                    <b>&lt h1 &gt Segundo parrafo &lt h1 &gt</b>
+                                <b>&lt/header&gt</b>
+                            <b>&lt/article&gt</b>
+                            <b>&ltarticle&gt</b>
+                                <b>&ltheader&gt</b>
+                                    <b>&lth1&gt Segundo parrafo &lth1&gt</b>
                                     <b>Descripción parrafo dos</b>
                                 <b>&lt /header &gt</b>
-                            <b>&lt /article &gt</b>
+                            <b>&lt/article&gt</b>
                         &lt/section&gt
                         &ltaside&gt
                             &ltblockquote>Mensaje uno&lt/blockquote&gt
@@ -430,5 +431,6 @@
     <p class="param"> Lo anteriormnete revisado se podria considerar lo mas importante dentro de HTML, existen muchas otras cosas pero por ahora esto será todo</p>
 </footer>
 </div>
+        <script src="../jss/prism.js"></script>
 </body>
 </html>

@@ -102,8 +102,10 @@ body {
   border: 1px solid #ccc;
   text-decoration: none;
 }
-
-.img img{
-    width: 600px;
-    margin: 10px 360px;
+img {
+    padding: 10px; 
+    margin: 10px; 
+    border: 2px solid black; 
+    float: right; 
+    width: 250px;
 }

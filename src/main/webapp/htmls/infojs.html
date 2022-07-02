@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
     <link href="../css/pa.css" rel="stylesheet" type="text/css" media="screen" >
-    
-    <!-- <link rel="stylesheet" href="/Proyecto-de-aula-main/src/main/webapp/css/prism.css">
-    <script src="prism.js"></script> -->
+    <link rel="stylesheet" href="../css/prism.css">
 </head>
 <body>
     <form action="../index.html">
@@ -60,7 +58,7 @@
             JavaScript, por lo general se suelen usar manejadores de eventos vinculados con el raton como son onclick, onMouseOver entre otros
             aunque también se suele usar en el teclado.
             <pre  class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -86,21 +84,23 @@
             El elemento &ltscript&gt puede ser utilizado en cualquier parte del documento, pero se recomienda colocarlo en la cabecera para tener mayor
             claridad.
             <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
-                    <b>&lttitle>Título del documento&gt/title&gt</b>
-                        <b>&lt script &gt</b>
-                        <b> function m_alerta(){</b>
-                            <b> alert('realizó clic'); }</b>
-                        <b> function e_alerta(){</b>
+                    <b>&lttitle>Título del documento&lt/title&gt</b>
+                        <b>&ltscript&gt</b>
+                        <code class="language-js">
+                            <b> function m_alerta(){</b> <br>
+                            <b> alert('realizó clic'); }</b> <br>
+                            <b> function e_alerta(){</b> <br>
                             <b> document.getElementsByTagName('p')[0].onclick=m_alerta; }</b>
-                        <b>&lt /script &gt</b>
+                        </code>
+                        <b>&lt/script&gt</b>
                     &lthead&gt
                     &ltdiv id="texto"&tgt
                         <b>&ltp&gt Hacer click</b><b>&ltp&gt</b>
-                    &lt/div&tgt
+                    &lt/div&gt
                     &lt/html&gt
                 </code>
             </pre>
@@ -109,13 +109,13 @@
         <p class="param">
             El código JavaScript crece de una manera exponencial cuando agrgamos funciones y nuevas APIs, por que si utilizamos los codigos embebidos
             el documento HTML seria enorme. La solucion mas recomendada para evitar este problema es agrupar todo el codigo JavaScript Enun archivo externo y luego añadirlo al documento HTML mediante el atributo <b>src:</b>.
-            <pre class="example">
-                <code>
+            <pre>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
-                        &lttitle>Título del documento&gt/title&gt
-                        <b>&lt script src="myjs.js"&gt&lt/script&gt</b>
+                        &lttitle>Título del documento&lt/title&gt
+                        <b>&ltscript src="myjs.js"&gt&lt/script&gt</b>
                     &lthead&gt
                     &ltbody&gt
                         &ltp&gt>&ltp&gt Mi prueba&ltp&gt
@@ -132,21 +132,21 @@
                 <li><h3>getElementsByTagName.</h3></li>
                     <p class="param">Se utiliza para referenciar un elemento por si nombre o palabra clave.</p>
                     <pre class="example">
-                        <code>
+                        <code class="language-markup">
                             &ltDOCTYPE html&gt
                             &lthtml lang=”es”&gt
                             &lthead&gt
                             &lttitle>Título del documento&gt/title&gt
-                                &lt script &gt
+                                &ltscript&gt
                                 function m_alerta(){
                                      alert('realizó clic'); }
                                 function e_alerta(){
                                     <b> document.getElementsByTagName('p')[0].onclick=m_alerta; }</b>
-                                &lt /script &gt
+                                &lt/script&gt
                             &lthead&gt
                             &ltdiv id="texto"&tgt
                                 <b>&ltp&gt Hacer click</b><b>&ltp&gt</b>
-                            &lt/div&tgt
+                            &lt/div&gt
                             &lt/html&gt
                         </code>
                     </pre>
@@ -154,21 +154,21 @@
                     <p class="param">Utilizado para referenciar un elemento especifco, por lo cual no pueden haber mas de un elementos con el 
                         mismo id.
                         <pre class="example">
-                            <code>
+                            <code class="language-markup">
                                 &ltDOCTYPE html&gt
                                 &lthtml lang=”es”&gt
                                 &lthead&gt
-                                &lttitle>Título del documento&gt/title&gt
-                                    &lt script &gt
+                                &lttitle>Título del documento&lt/title&gt
+                                    &ltscript&gt
                                     function m_alerta(){
                                         alert('realizó clic'); }
                                     function e_alerta(){
                                         <b> document.getElementById('mitexto')[0].onclick=m_alerta; }</b>
-                                    &lt /script &gt
+                                    &lt/script&gt
                                 &lthead&gt
                                 &ltdiv id="texto"&tgt
                                     <b>&ltp id="mitexto"&gt Hacer click</b><b>&ltp&gt</b>
-                                &lt/div&tgt
+                                &lt/div&gt
                                 &lt/html&gt
                             </code>
                         </pre>
@@ -176,22 +176,22 @@
                 <li><h3>getElementsByClassName.</h3></li>
                 <p class="param">Este elemnto es una nueva incorporacion que nos permite obtener un elemento a partir del valor <b>class</b></p>.
                     <pre class="example">
-                        <code>
+                        <code class="language-markup">
                             &ltDOCTYPE html&gt
                                 &lthtml lang=”es”&gt
                                 &lthead&gt
-                                &lttitle>Título del documento&gt/title&gt
-                                    &lt script &gt
+                                &lttitle>Título del documento&lt/title&gt
+                                    &ltscript&gt
                                     function m_alerta(){
                                         alert('realizó clic'); }
                                     function e_alerta(){
                                         <b> document.getElementsByClassName('mititulo')[0].onclick=m_alerta; }</b>
-                                    &lt /script &gt
+                                    &lt/script&gt
                                 &lthead&gt
                                 &ltdiv id="texto"&tgt
                                     &ltp id="mitexto"&gt Hacer click/&ltp&gt
                                     <b>&lth1 class="mititulo"&gt Hacer click dos</b><b>&lth1&gt</b>
-                                &lt/div&tgt
+                                &lt/div&gt
                                 &lt/html&gt
                         </code>
                     </pre>
@@ -207,23 +207,23 @@
                 <p class="param">Este método retorna el primer elemento que concuerde con el grupo de selectores especificados entre
                     paréntesis, los selectores osn declarados usando comillas y la misma sintaxis CSS.
                     <pre class="example">
-                        <code>
+                        <code class="language-markup">
                             &ltDOCTYPE html&gt
                                 &lthtml lang=”es”&gt
                                 &lthead&gt
-                                &lttitle>Título del documento&gt/title&gt
-                                    &lt script &gt
+                                &lttitle>Título del documento&lt/title&gt
+                                    &ltscript&gt
                                     function m_alerta(){
                                         alert('realizó clic'); }
                                     function e_alerta(){
                                         <b> document.querySelector("#texto h1:first-child").onclick=m_alerta; }</b>
-                                    &lt /script &gt
+                                    &lt/script&gt
                                 &lthead&gt
                                 &ltdiv id="texto"&tgt
                                     &ltp id="mitexto"&gt Hacer click/&ltp&gt
                                     <b>&lth1 class="mititulo"&gt Hacer click dos</b><b>&lth1&gt</b>
                                     <b>&lth1 class="mititulo"&gt Hacer click tres</b><b>&lth1&gt</b>
-                                &lt/div&tgt
+                                &lt/div&gt
                                 &lt/html&gt
                         </code>
                     </pre>
@@ -233,26 +233,26 @@
                 <p class="param"> Este método es muy parecido al anterior, con la diferencia que este de devolverá todos los emelentos
                     que especificastes en el paréntesis en forma de lista.
                     <pre class="example">
-                        <code>
+                        <code class="language-markup">
                             &ltDOCTYPE html&gt
                                 &lthtml lang=”es”&gt
                                 &lthead&gt
-                                &lttitle>Título del documento&gt/title&gt
-                                    &lt script &gt
+                                &lttitle>Título del documento&lt/title&gt
+                                    &ltscript&gt
                                     function m_alerta(){
                                         alert('realizó clic'); }
                                     function e_alerta(){
                                         <b> var lista = document.querySelector("#texto h1");}</b>
                                          <b>for(var i=0; i&ltlista; i++)</b>
                                             <b>lista[i]..onclick=m_alerta;</b>
-                                    &lt /script &gt
+                                    &lt/script&gt
                                 &lthead&gt
                                 &ltdiv id="texto"&tgt
                                     &ltp id="mitexto"&gt Hacer click/&ltp&gt
                                     <b>&lth1 class="mititulo"&gt Hacer click dos</b><b>&lth1&gt</b>
                                     <b>&lth1 class="mititulo"&gt Hacer click tres</b><b>&lth1&gt</b>
                                     <b>&lth1 class="mititulo"&gt Hacer click cuatro</b><b>&lth1&gt</b>
-                                &lt/div&tgt
+                                &lt/div&gt
                                 &lt/html&gt
                         </code>
                     </pre>
@@ -267,5 +267,6 @@
             </p>
         </footer>
     </div>
+    <script src="../jss/prism.js"></script>
 </body>
 </html>

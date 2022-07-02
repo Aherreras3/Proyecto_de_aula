@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CSS</title>
         <link rel="stylesheet" href="../css/pa.css">
-        <!-- <link rel="stylesheet" href="/Proyecto-de-aula-main/src/main/webapp/css/prism.css">
-        <script src="prism.js"></script> -->
+        <link rel="stylesheet" href="../css/prism.css">
+        
     </head>
     <body>
         <form action="../index.html">
@@ -66,7 +66,7 @@
                 Una de las tecnicas mas comunes y usadas es incorporar los estilos CSS en el mismo documento HTML, asignando estilos
                 dentro de las etiquetas utilizando el atributo <span lang="en">style</span>.
             <pre  class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -85,7 +85,7 @@
         <p class="param">
             Una mejor forma a comparacion de la anterio es insertar los etilos en la cabecera del documento y luego usar referencias para afectar a los elementos HTML segun sea necesario.
         <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -106,8 +106,8 @@
         La mejor solución es mover todos los estilos a un documento externo y luego utilizar el atributo &ltlink&gt
         en cada documento donde se desee utilizar dichos estilos. Este método nos permite cambiar todos los estilos y adaptar
         los documentos a cada dispositivo de manera más eficaz.
-    <pre class="example">
-                <code>
+    <pre>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -134,7 +134,7 @@
     Al aplicar estilos referenciando por palabra clave del elemento, el cambio se aplica a todos los elementos del mismo tipo,
     ejemplo, en l siguiente declaracion se modeificaran todos los elementos &ltp&gt.
 <pre class="example">
-                <code>
+                <code class="language-css">
                     p { font-size: 20px }
                 </code>
 </pre>
@@ -149,7 +149,7 @@
     elementos con el mismo id, al referenciar un elemento en el archivo CSS se lo declara con el símbolo # al frente del valor 
     que usaremos para identificar el elemento.
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -163,7 +163,7 @@
     Realizando ferencia por el atributo id:
 </p>
 <pre class="example">
-                <code>
+                <code class="language-css">
                     #text1{
                         font-size: 20px;
                     }                    
@@ -178,7 +178,7 @@
     Colocando atributo class en HTML:
 
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -193,7 +193,7 @@
     Referenciando <span lang="en">Class</span> desde CSS:
 </p>
 <pre class="example">
-                <code>
+                <code class="language-css">
                     .texto1 { font-size: 20px }
                 </code>
 </pre>
@@ -203,7 +203,7 @@
     Los métodos de referencias estudiados anteriormente cubren la mayor parte de las necesidades, pero a veces no es suficiente. <br>
     En la última versión de CSS se han incorporado nuevas formas de referenciar elementos HTML, ahora podemos referenciar un elemento no solo por id y <span lang="en">Class</span> sino también a través de cualquier otro atributo.
 <pre class="example">
-                <code>
+                <code class="language-css">
                     p[name] { font-size: 20px }
                 </code>
 </pre>
@@ -212,7 +212,7 @@
     CSS3 perimite combinar "=" con otros para hacer una seleccion mas especifica. <br> Ejemplo:
 </p>
 <pre class="example">
-                <code>
+                <code class="language-css">
                     p[name^=”mi”] { font-size: 20px } 
                     p[name$=”mi”] { font-size: 20px }
                     p[name*=”mi”] { font-size: 20px }
@@ -232,7 +232,7 @@ En estos ejemplos usamos el elemento &ltp&gt, el atributo name, y una cadena de 
     CSS3 tambien trajo consigo nuevas pseudo clases que premiten realizar una busqueda de un elemento de una forma aun mas exacta. <br>
     Pantilla de prueba:
 <pre class="example">
-                <code>
+                <code class="language-markup">
                     &ltDOCTYPE html&gt
                     &lthtml lang=”es”&gt
                     &lthead&gt
@@ -251,7 +251,7 @@ En estos ejemplos usamos el elemento &ltp&gt, el atributo name, y una cadena de 
     Usaremos como primer ejemplo el nth-child.
 </p>
 <pre class="example">
-                <code>
+                <code class="language-css">
                     p:nth-child(2){ 
                         background: #999999; 
                        }                     
@@ -263,7 +263,7 @@ En estos ejemplos usamos el elemento &ltp&gt, el atributo name, y una cadena de 
 </p>
 </p>
 <pre class="example"> 
-            <code>
+            <code class="language-css">
                 *{ 
                     margin: 0px; 
                    } 
@@ -285,7 +285,7 @@ En estos ejemplos usamos el elemento &ltp&gt, el atributo name, y una cadena de 
     parámetros, y son implementadas como en el siguiente.[1] <br> ejemplo:
 </p>
 <pre class="example">
-            <code>
+            <code class="language-css">
                 *{ 
                     margin: 0px; 
                    } 
@@ -298,7 +298,7 @@ En estos ejemplos usamos el elemento &ltp&gt, el atributo name, y una cadena de 
     Otra importante pseudo clase llamada not() es utilizada realizar una negación: 
 </p>
 <pre class="example">
-            <code>
+            <code class="language-css">
                 :not(p){ 
                     margin: 0px; 
                    } 
@@ -313,7 +313,7 @@ En estos ejemplos usamos el elemento &ltp&gt, el atributo name, y una cadena de 
     Hay algunos selectores más que fueron agregados o que ahora son considerados parte de CSS3 y pueden ser útiles para nuestros diseños. Estos
     selectores usan los símbolos >, + y ~ para especificar la relación entre elementos.[1]
 <pre class="example">
-                <code>
+                <code class="language-css">
                     div > p.mitexto2{ 
                         color: #990000;                     
                 </code>
@@ -323,7 +323,7 @@ En estos ejemplos usamos el elemento &ltp&gt, el atributo name, y una cadena de 
     como su padre. La regla anterior modifica los elementos &ltp&gt que son hijos de un elemento &ltdiv&gt.[1]
 </p>
 <pre class="example">
-                <code>
+                <code class="language-css">
                     p.mitexto2 + p{ 
                         color: #990000; 
                        }                    
@@ -334,7 +334,7 @@ En estos ejemplos usamos el elemento &ltp&gt, el atributo name, y una cadena de 
     en su atributo class.[1]
 </p>
 <pre class="example">
-                <code>
+                <code class="language-css">
                     p.mitexto2 ~ p{ 
                         color: #990000; 
                        }                    
@@ -353,5 +353,6 @@ En estos ejemplos usamos el elemento &ltp&gt, el atributo name, y una cadena de 
     </p>
 </footer>
 </div>
+        <script src="../jss/prism.js"></script>
 </body>
 </html>
