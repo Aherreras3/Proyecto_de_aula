@@ -1,4 +1,12 @@
 /* The side navigation menu */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternaes|Poppins&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates',sans-serif;
+}
+/* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% altura */
     width: 0; /* ancho */
@@ -6,7 +14,7 @@
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: green; /*color*/
+    background-color: #c7c7c7; /*color*/
     overflow-x: hidden; /* desplazamiento horizontal */
     padding-top: 60px; 
     transition: 0.5s; /* segundos de transisicion */
@@ -16,14 +24,16 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #ffffff;
+    color: #1f1f1f;
     display: block;
     transition: 0.3s
 }
  
 /* Cambiar de color al pasar puntero */
 .sidenav a:hover, .offcanvas a:focus{
+    border-left: 5px solid #c7c7c7;
     color: #f1f1f1;
+    background: #1f1f1f;
 }
  
 /* boton de cerrar en el munu del index */
@@ -35,20 +45,21 @@
     margin-left: 50px;
 }
  
-/* desplazar el contenido de la página a la derecha cuando abra la navegación lateral */
 #main {
     transition: margin-left .5s;
-    padding: 20px;
+    padding: 0px;
     overflow:hidden;
     width:100%;
 }
 body {
   overflow-x: hidden;
+  background-image: url(https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg);
+  background-size: 100%;
+  transition: margin-left .5s;
 }
  
 /* color del menu */
 .topnav {
-    background-color:green;
     overflow: hidden;
 }
  
@@ -101,11 +112,4 @@ body {
   background-color: #eeeeee;
   border: 1px solid #ccc;
   text-decoration: none;
-}
-img {
-    padding: 10px; 
-    margin: 10px; 
-    border: 2px solid black; 
-    float: right; 
-    width: 250px;
 }
