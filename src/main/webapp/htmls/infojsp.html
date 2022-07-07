@@ -18,7 +18,12 @@
             <ul>
                 <li><a href="#qjs">1 ¿Qué es JavaServer Pages?</a></li>
                 <ul>
-                    <li><a href="#conp">1.1 Elementos de JSP</a></li>
+                    <li><a href="#conp">2.0 Elementos de JSP</a></li>
+                    <li><a href="#incjs">2.1 Código Java</a></li>
+                    <li><a href="#incjs1">2.1.1 Expresiones</a></li>
+                    <li><a href="#incjs2">2.1.2 Scriptlets</a></li>
+                    <li><a href="#incjs3">2.1.3 Declaraciones</a></li>
+                    <li><a href="#tec1">2.2 Directivas</a></li>
                 </ul>
             </ul>
         </div>
@@ -49,12 +54,116 @@
                     &lt/html&gt 
                 </code>
             </pre>
-            </p>
-            <h2 id="conp" class="subtitle">Elementos de JSP</h2>
+        </p>
+        <h2 id="conp" class="subtitle">Elementos de JSP</h2>
+        <p class="param">
+            Los comentarios en las páginas JSP se escriben: <%-- comentario --%>
+        </p>
+        <h2 id="incjs" class="subtitle">Código Java</h2>
+        <p class="param">
+            Podemos insertar código Java dentro de JSP de tres formas: Expresiones, scriptlets y declaraciones.<br>
+        </p>
+        <h2 id="incjs1" class="subtitle">Expresiones</h2>
+        <p class="param">
+            Son fragmentos de código Java, con la forma <strong><%= expresión %></strong> que se evalúan
+            y se muestran en la salida del navegador. En general, dentro de una expresión podemos usar cualquier
+            cosa que usaríamos dentro de un <strong>System.out.print(expr);.</strong><br>
+            <strong>Ejemplo</strong>
+        </p>
+        <pre  class="example">
+                <code class="language-markup">
+                        <%= "Tamaño de cadena: "+cadena.length() %>
+                        <%= new java.util.Date() %>
+                        <%= Math.PI*2 %> 
+                </code>
+        </pre>
+        <h2 id="incjs2" class="subtitle">Scriptlets</h2>
+        <p class="param">
+            Son fragmentos de código Java con la forma <% código %>, en general, podemos
+            insertar cualquier código que pudiéramos usar dentro de una función Java. Para acceder a la salida del
+            navegador, usamos el objeto implícito <strong>out.</strong><br>
+            <strong>Ejemplo</strong>
+        <pre  class="example">
+                <code class="language-markup">
+                        &lttable&gt
+                                <% for (int i=0;i<10;i++)
+                                     {
+                                %>
+                                &lttr&gt&lttd&gt <%=i%> &lt/td&gt&lt/tr&gt
+                                <% }
+                                %>
+                       &lt/table&gt
+                        <%
+                           out.println("&lttable&gt");
+                           for (int i=0;i<10;i++)
+                          out.println("&lttr&gt&lttd&gt"+i+"&lt/td&gt&lt/tr&gt");
+                           out.println("&lt/table&gt");
+                        %>
+                </code>
+        </pre>
+        Si observamos los dos ejemplos anteriores (que hacen lo mismo), podría parecer que la segunda opción
+        es más deseable, pero en general hay que evitar el uso de <strong>out.println(</strong> para elementos HTML. En
+        un proyecto en el que trabajen programadores y diseñadores conjuntamente, hay que separar presentación
+        y código tanto como sea posible.<br>
+        Dentro de un scriptlet podemos usar cualquier librería de Java, incluyendo las propias, lo cual hace que
+        resulte muy sencillo construir interfaces web de entrada y salida para nuestras clases.
+        <pre  class="example">
+                <code class="language-markup">
+                      <%
+                           String parametro1=request.getParameter("parametro1");
+                           String parametro2=request.getParameter("parametro2");
+                           MiClase miClase=new MiClase();
+                           String salida=miClase.procesa(parametro1, parametro2);
+                      %>
+                      <%= salida %>
+                </code>
+        </pre>
+    </p>
+    <h2 id="incjs3" class="subtitle">Declaraciones</h2>
+        <p class="param">
+            Contienen declaraciones de variables o métodos, con la forma<strong> <%!
+            declaración %>.</strong> Estas variables o métodos serán accesibles desde cualquier lugar de la página JSP.
+            Hay que tener en cuenta que el servidor transforma la página JSP en un servlet, y éste es usado por
+            múltiples peticiones, lo que provoca que las variables conserven su valor entre sucesivas ejecuciones. 
+        <pre  class="example">
+                <code class="language-markup">
+                        <%! int numeroAccesos=0; %>
+                        &lthtml&gt
+                              &ltbody&gt
+                                   <%=
+                                      "La página ha sido accedida "+(++numeroAccesos)+
+                                      " veces desde el arranque del servidor"
+                                   %>
+                              &lt/body&gt
+                        &lt/html&gt
+                        <%! java.util.Date primerAcceso=new java.util.Date(); %>
+                        &lthtml&gt
+                           &ltbody&gt
+                                 El primer acceso a la página se realizo en:
+                                 <%= primerAcceso %>
+                           &lt/body&gt
+                        &lt/html&gt 
+                </code>
+        </pre>
+    </p>
+    <h2 id="tec1" class="subtitle">Declaraciones</h2>
             <p class="param">
-                El crecimiento de JavaScript trajo consigo el crecimiento de los navegadores, ahora estos integraban interfaces de programación
-                (APIs) para asistir al lenguaje en funciones elementales. Con esto se busca hacer disponibles nuevas funciones con técnicas de
-                programación sencillas y estándares, expandiendo el alcance del lenguaje y facilitando la creación de programas útiles para la web.
-            </p>
+                Las directivas son elementos que proporcionan información al motor JSP, e influirán en la estructura del
+                servlet generado. Hay tres tipos de directivas: <strong>page, taglib e include.</strong> 
+            <pre  class="example">
+                <code class="language-markup">
+                    &ltDOCTYPE html&gt
+                    &lthtml lang=”es”&gt
+                    &lthead&gt
+                        <b>&lttitle>Título del documento&gt/title&gt</b>
+                    &lthead&gt
+                    &ltbody&gt
+                        <b>&ltp onclick="alert('se realizo un click') "&gt Mi prueba</b><b>&ltp&gt</b>
+                    &ltbody&gt
+                    &lt/html&gt
+                </code>
+            </pre>
+</div>
+<script src="../jss/prism.js"></script>
 </body>
 </html>
