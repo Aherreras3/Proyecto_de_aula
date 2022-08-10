@@ -145,3 +145,13 @@ button#into{
     width: 100%;
     margin: 0px 0px 10px 0px;
 }
+
+div.clases{
+    height: 75%;
+    border: solid 1px black;
+    margin: 70px 0px 0px 0px;
+    float: right;
+    width: 75%;
+    background-color: rgb(220, 236, 241);
+    overflow: scroll;
+}
