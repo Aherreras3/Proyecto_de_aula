@@ -155,3 +155,14 @@ div.clases{
     background-color: rgb(220, 236, 241);
     overflow: scroll;
 }
+
+
+#soap{
+    float: right;
+    width: 49%;
+}
+
+#rest{
+    float: left;
+    width: 49%;
+}
