@@ -166,3 +166,8 @@ div.clases{
     float: left;
     width: 49%;
 }
+.img img{
+    width: 400px;
+    margin: 5px 300px;
+    
+}

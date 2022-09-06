@@ -56,6 +56,11 @@ body {
   background-image: url(https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg);
   background-size: 100%;
   transition: margin-left .5s;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+    line-height: 1.5em;
 }
  
 /* color del menu */
@@ -112,4 +117,51 @@ body {
   background-color: #eeeeee;
   border: 1px solid #ccc;
   text-decoration: none;
+}
+
+.navegacion{
+    width: 990px;/*USAMOS LA CLASE PRINCIPAL PARA PODER ORDENAR NUESTRAS LISTAS*/
+    margin: 40px auto;
+    background: #fff;
+}
+.navegacion ul{
+    list-style: none;
+}
+.menu > li{
+    position: relative;/*POSISICON DEL MENU EN NUSTRO PAGINA WEB*/
+    display: inline-block;
+}
+.menu >li>a{
+    display: block; /*ARREGLAMOS EL TIPO DE LETRA DEL MENU SIN SUBRAYADO Y AÑADIMOS COLOR*/
+    padding: 12px 20px;
+    color: #353535;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+}
+
+.menu >li> a:hover{
+    color: #CE7D35;
+    transition: all .3s;
+
+}
+.submenu{
+    position: absolute;/*ARREGLAMOS EL TIPO DE LETRA DEL SUBMENU SIN SUBRAYADO, AÑADIMOS COLOR y ubicacion tamaño de letra*/
+    background: #333333;
+    width: 120%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacyte 1.5s;
+}
+
+.submenu li a{
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    font-family: 'Times New Roman';
+    text-decoration: #333333;
+
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
 }

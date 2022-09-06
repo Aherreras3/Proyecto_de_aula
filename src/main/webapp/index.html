@@ -5,22 +5,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Menú</title>
-        <link rel="stylesheet" href="css/barranav.css">    
+        <link rel="stylesheet" href="css/barranav.css">   
+        
     </head>
     <body>
+
         <div id="sideNavigation" class="sidenav">
             <a href="#" class="closebtn" onclick="closeNav()"
                >&times;</a
             >
-            <a href="htmls/introduccion.html">Introducción</a>
-            <a href="htmls/infohtml.html">HTML</a>
-            <a href="htmls/infocss.html">CSS</a>
-            <a href="htmls/infojs.html">JavaScript</a>
-            <a href="htmls/infoaccesibilidad.html">Accesibilidad Web</a>
-            <a href="htmls/infojsp.html">JavaServer Pages</a>
-            <a href="htmls/infojsf.html">JavaServer Faces</a>
-            <a href="htmls/infoservices.html">Servicios Web</a>
-            
+                    <a href="htmls/introduccion.html">Introducción</a>
+                    <a href="htmls/infohtml.html">HTML</a>
+                    <a href="htmls/infocss.html">CSS</a>
+                    <a href="htmls/infojs.html">JavaScript</a>
+                    <a href="htmls/infoaccesibilidad.html">Accesibilidad Web</a>
+                    <a href="htmls/infojsp.html">JavaServer Pages</a>
+                    <a href="htmls/infojsf.html">JavaServer Faces</a>
+                    <a href="htmls/infoservices.html">Servicios Web</a>
+                    <ul  class="menu"> <!<!-- usamosel ul para crear una lista y sublista -->
+                        <li><a  href="#">Exposiciones</a>
+                            <ul class="submenu">
+                                <li><a href="htmls/Springboot.html">Spring Boot</a></li>
+                                <li><a href="htmls/Larabel.html">Laravel</a></li>
+                                <li><a href="htmls/Django.html">Django</a></li>
+                                <li><a href="htmls/Angular.html">Angular</a></li>
+                            </ul>
+                        </li>
+                   </ul>
         </div>
 
         <nav class="topnav">
@@ -34,9 +45,9 @@
         </nav>
 
         <div id="main">
-            
+
             <h3 style="text-align: center ">APLICACIONES WEB</h3>
-            
+
         </div>
         <script>
             function openNav() {
